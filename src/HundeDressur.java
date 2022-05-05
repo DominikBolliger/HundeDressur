@@ -14,25 +14,22 @@ public class HundeDressur {
         bello.posX = 3;
         bello.posY = 7;
 
-        for (int i = 0; i < 10; i++) {
-            System.out.println("Fido ist " + fido.gewicht + " kg schwer.");
-            System.out.println("Bello ist " + bello.gewicht + " kg schwer.");
-            fido.gibLaut();
-            bello.gibLaut();
+        System.out.println("Fido ist " + fido.gewicht + " kg schwer.");
+        System.out.println("Bello ist " + bello.gewicht + " kg schwer.");
+        fido.gibLaut(4);
+        bello.gibLaut(6);
 
-            fido.move();
-            System.out.println("Fido befindet sich an der Position " + fido.posX + ":" + fido.posY);
+        fido.move();
+        System.out.println("Fido befindet sich an der Position " + fido.posX + ":" + fido.posY);
 
-            bello.move();
-            System.out.println("Fido befindet sich an der Position " + fido.posX + ":" + fido.posY);
-            System.out.println("---------------------------------------------");
-            System.out.println();
-            try {
-                TimeUnit.SECONDS.sleep(2);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
+        bello.move();
+        System.out.println("Fido befindet sich an der Position " + fido.posX + ":" + fido.posY);
+        System.out.println("---------------------------------------------");
+        System.out.println();
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }
